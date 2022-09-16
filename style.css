@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+body {
+  font: 18px "Open+Sans", sans-serif;
+  color: black;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url(bg.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-animation: backgroundZoomAnimate 36s forwards;
+          animation: backgroundZoomAnimate 36s forwards;
+}
+
+@-webkit-keyframes backgroundZoomAnimate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes backgroundZoomAnimate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+.profile-card {
+  box-shadow: 0 18px 200px -60px black;
+  border-radius: 50px;
+  width: 650px;
+  position: relative;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.2509803922);
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .profile-card {
+    width: auto;
+  }
+}
+.profile-card_img img {
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: wheat 0px 0px 50px 0px;
+}
+.profile-card_desc {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.profile-card_desc h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.profile-card_desc h1 + div {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.profile-card_info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+@media screen and (max-width: 567px) {
+  .profile-card_info {
+    gap: 10px;
+  }
+}
+.profile-card_info > div {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.profile-card_info > div > *:first-child {
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  margin-bottom: 15px;
+}
+.profile-card_info > div > * :last-child {
+  font-size: 16px;
+  opacity: 0.7;
+}
+.profile-card_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.profile-card_social a {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 15px;
+  border-radius: 40%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card_social a {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile-card_social a:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+}
+.profile-card_social a.facebook {
+  background: linear-gradient(45deg, rgb(238, 145, 222), rgb(156, 28, 124));
+  box-shadow: 0 4px 30px rgba(41, 113, 207, 0.5);
+}
+.profile-card_social a.facebook:hover {
+  box-shadow: 0px 4px 30px rgb(59, 123, 196);
+}
+.profile-card_social a.spotify {
+  background: linear-gradient(45deg, rgb(238, 145, 222), rgb(156, 28, 124));
+  box-shadow: 0 4px 30px rgba(41, 113, 207, 0.5);
+}
+.profile-card_social a.spotify:hover {
+  box-shadow: 0px 4px 30px rgb(59, 123, 196);
+}
+.profile-card_social a.instagram {
+  background: linear-gradient(45deg, rgb(238, 145, 222), rgb(156, 28, 124));
+  box-shadow: 0 4px 30px rgba(41, 113, 207, 0.5);
+}
+.profile-card_social a.instagram:hover {
+  box-shadow: 0px 4px 30px rgb(59, 123, 196);
+}
+.profile-card_actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 567px) {
+  .profile-card_actions {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.profile-card_actions > button {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px;
+  min-width: 250px;
+  border-radius: 50px;
+  text-align: center;
+  color: wheat;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card_actions > button {
+    min-width: 170px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card_actions > button {
+    min-width: inherit;
+    width: 100px;
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card_actions > button:hover {
+    transform: translateY(-5px);
+  }
+}
+.profile-card_actions > button.mess {
+  background: linear-gradient(45deg, rgb(83, 211, 194), rgb(104, 168, 211));
+  box-shadow: 0 4px 30px rgba(41, 113, 207, 0.5);
+}
+.profile-card_actions > button.mess:hover {
+  box-shadow: 0px 4px 30px rgb(59, 123, 196);
+}
+.profile-card_actions > button.theodoi {
+  background: linear-gradient(45deg, rgb(83, 211, 194), rgb(104, 168, 211));
+  box-shadow: 0 4px 30px rgba(41, 113, 207, 0.5);
+}
+.profile-card_actions > button.theodoi:hover {
+  box-shadow: 0px 4px 30px rgb(59, 123, 196);
+}/*# sourceMappingURL=style.css.map */
